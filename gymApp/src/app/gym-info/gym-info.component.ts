@@ -39,7 +39,7 @@ export class GymInfoComponent implements OnInit {
 		this.activatedRoute.params.subscribe((params: Params) => {
 			this.gymName = params.name;
 
-		    this.gymManager.getData('gymApp/gymApp/dist/assets/data/gyms.json')
+		    this.gymManager.getData('/assets/data/gyms.json')
 		    .subscribe( res => {
 		    	for( let val of res){
 		    		if(val.gym_name == this.gymName){
@@ -49,7 +49,7 @@ export class GymInfoComponent implements OnInit {
 		    	}
 		    });
 
-		    this.memberManager.getData('gymApp/gymApp/dist/assets/data/members.json')
+		    this.memberManager.getData('/assets/data/members.json')
 		    .subscribe( res => {
 		    	this.membersLists = res;
       			this.formatTableList();

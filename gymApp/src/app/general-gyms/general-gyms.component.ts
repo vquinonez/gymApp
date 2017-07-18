@@ -27,7 +27,7 @@ export class GeneralGymsComponent implements OnInit {
   	if(!this.isLogin())
   		this.router.navigate(['/login']);
 
-    this.dataManager.getData('gymApp/gymApp/dist/assets/data/gyms.json').subscribe( res =>{
+    this.dataManager.getData('/assets/data/gyms.json').subscribe( res =>{
       this.gymsList = res;
       this.formatTableList();
     });

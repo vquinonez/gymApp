@@ -26,12 +26,12 @@ export class GeneralMembersComponent implements OnInit {
   		if(!this.isLogin())
   		this.router.navigate(['/login']);
 
-	    this.memberManager.getData('gymApp/gymApp/dist/assets/data/members.json').subscribe( res =>{
+	    this.memberManager.getData('/assets/data/members.json').subscribe( res =>{
 	      this.membersList = res;
 	      this.formatTableList();
 	    });
 
-	    this.gymManager.getData('gymApp/gymApp/dist/assets/data/gyms.json').subscribe( res =>{
+	    this.gymManager.getData('/assets/data/gyms.json').subscribe( res =>{
 	      this.gymsList = res;
 	      this.formatTableList();
 	    });
