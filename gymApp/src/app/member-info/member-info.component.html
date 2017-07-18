@@ -1,0 +1,17 @@
+<div class="col-12">
+	<h2>{{ memberInfo.name.first + ' ' + memberInfo.name.last }}</h2>
+	<div class="gym-info row">
+	    <div class="col-3" >
+	    	<img src="{{memberInfo.profile_img}}">
+	    </div>
+		<div class="col-9 info-data">
+			<label><span class="header-info">Level difficulty: </span>{{ memberInfo.difficulty_level }}</label>
+			<label><span class="header-info">Address: </span>{{ memberInfo.address }}</label>
+			<label><span class="header-info">Phone number: </span>{{ memberInfo.phone }}</label>
+			<label><span class="header-info">Email: </span>{{ memberInfo.email }}</label>
+			<label><span class="header-info">Register date: </span>{{ memberInfo.registered }}</label>
+			<label><span class="header-info">Gym: </span> <a href="gyms/{{ getGymName( memberInfo.affilated_gym ) }}"> {{ getGymName( memberInfo.affilated_gym ) }} </a></label>
+	    </div>
+	</div>
+
+</div>

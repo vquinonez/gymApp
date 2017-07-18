@@ -1,0 +1,16 @@
+
+<div class="sidebar">
+	<h2> Gym Manager</h2>
+
+	<ul *ngIf="isLogin()">
+		<li>
+			<a routerLink="/gyms" routerLinkActive="active">Gym List</a>
+		</li>
+		<li>
+			<a routerLink="/members" routerLinkActive="active">Client List</a>
+		</li>
+		<li class="logout">
+			<a href="login" id="logout" (click)="logOut()">LogOut</a>
+		</li>
+	</ul>
+</div>

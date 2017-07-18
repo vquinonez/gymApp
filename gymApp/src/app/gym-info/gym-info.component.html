@@ -1,0 +1,17 @@
+<div class="col-12">
+	<h2>{{ gymInfo.gym_name }}</h2>
+	<div class="gym-info row">
+		<div class="col-6 info-data">
+			<label><span class="header-info">Address: </span>{{ gymInfo.address }}</label>
+			<label><span class="header-info">Phone number: </span>{{ gymInfo.phone }}</label>
+			<label><span class="header-info">Email: </span>{{ gymInfo.email }}</label>
+			<label><span class="header-info">Members: </span>{{membersInGym( gymInfo.id )}}</label>
+	    </div>
+	    <div class="col-6" >
+	    	<span class="header-info">Descripcion: </span>
+			<p>{{ gymInfo.description }}</p>
+	    </div>
+	</div>
+
+	<app-list-items [dataSet] = "formatTableList()" ></app-list-items>
+</div>

@@ -1,0 +1,18 @@
+{
+  "name": "gymapp",
+  "version": "1.0.0",
+  "description": "Create an app that helps to manage the information of a gym franchise, it should provide to the manager to see the global information from all the franchise, the information from every gym, and the data for each client.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://RicardoQuinonez@bitbucket.org/RicardoQuinonez/gymapp.git"
+  },
+  "author": "Ricardo Quiñonez",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/RicardoQuinonez/gymapp#readme"
+}

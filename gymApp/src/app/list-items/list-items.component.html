@@ -1,0 +1,24 @@
+<div class="row">
+	<table class="col-12 table table-striped">
+		<thead class="thead-inverse">
+			<tr>
+				<th *ngFor = "let head of tableSet.header;">
+					<a (click)="sortFields(head)">{{ head }}</a>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor = "let row of tableSet.rows | fieldsFilter: sortField;">
+				<td *ngFor = "let item of row.items;">
+					<div *ngIf="item.href; then thenBlock else elseBlock"></div>
+					<ng-template #thenBlock>
+						<a href="{{ generateURL(item.href) }}" *ngIf="item.href">{{item.value}}</a>
+					</ng-template>
+					<ng-template #elseBlock>
+						{{item.value}}
+					</ng-template>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
