@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
       }
 
   		//Get Data from JSON and assign it to IUser Array
-  		this.dataManager.getData('/assets/data/users.json').subscribe( res =>{
+  		this.dataManager.getData('https://vquinonez.github.io/gymApp/gymApp/dist/assets/data/users.json').subscribe( res =>{
   			this.usersList = res;
   		});
   	}
